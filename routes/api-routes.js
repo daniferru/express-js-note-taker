@@ -14,11 +14,12 @@ router.post('/api/notes', (req, res) => {
         text: req.body.text,
         id: uuidv4(),
     };
-    bdJSON.push(newFeed);
+    dbJSON.push(newFeed);
     fs.writeFileSync('db/db.json', JSON.stringify(dbJSON));
     res.json(dbJSON);
 });
 
+// deletes the delete request
 router.delete('/notes/:id', (req, res) => {
     let data = fs.readFileSync('db/db.json', 'utf8');
     const dataJSON = JSON.parse(data);
