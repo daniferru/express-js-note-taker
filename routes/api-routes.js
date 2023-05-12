@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-// const store = require('../db/store');
+const fs = require('fs');
 
 router.get('/notes', async (req, res) => {
     const dbJSON = await JSON.parse(fs.readFilesSync('db/db.json', 'utf8'));
