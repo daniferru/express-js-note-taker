@@ -12,5 +12,5 @@ app.use('/api', api_routes);
 app.use('/', html_routes);
 
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost${PORT}🚀`);
+    console.log(`Server running on http://localhost:${PORT} 🚀`);
 });
